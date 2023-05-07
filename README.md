@@ -1,4 +1,4 @@
-# Storing Melbourne weather data in AWS S3 bucket from [OpenWeatherMap](https://openweathermap.org/forecast5) API 
+## Storing Melbourne weather data in AWS S3 bucket from [OpenWeatherMap](https://openweathermap.org/forecast5) API 
 
 This project fetches Melbourne weather data from the OpenWeatherMap API for Melbourne, Australia, and stores it as a CSV file in an AWS S3 bucket. The project is implemented as a Lambda function that runs on a scheduled basis every 3 hours using EventBridge. Serverless Framework used for making Infrastructure as Code.
 
@@ -69,6 +69,9 @@ The **requirements.txt** file contains required packages for running project.
 
 **Future improvement ideas:**
 
-1. Split the store_api_data() function into different functions (e.g.,: get_api_data(), parse_api_data(), store_api_data()) for the reusability.
-2. Build a pipeline (CI/CD) 
+1. Split the store_api_data() function into different functions (e.g., get_api_data(), parse_api_data(), store_api_data()) for the reusability.
+2. Create .env file to keep api_key
+3. Exclude some unnecessary project files for the deployment (e.g., requirements.txt)
+4. Reduce the deployment package size
+5. Build a pipeline (CI/CD) 
 
